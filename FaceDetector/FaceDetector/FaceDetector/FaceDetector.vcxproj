@@ -150,6 +150,9 @@
     <Xml Include="haarcascade_eye_tree_eyeglasses.xml" />
     <Xml Include="lbpcascade_frontalface.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="150624-094923.wmv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,13 @@
+﻿Build started 6/24/2015 11:21:29 AM.
+     1>Project "C:\Users\Vince\Documents\GitHub\Stentriq_Vince\LineDetector\LineDetector\LineDetector\LineDetector.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Vince\Documents\Opencv\opencv\build\x64\vc12\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vince\Documents\GitHub\Stentriq_Vince\LineDetector\LineDetector\Debug\LineDetector.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Vince\Documents\Opencv\opencv\build\x64\vc12\lib opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vince\Documents\GitHub\Stentriq_Vince\LineDetector\LineDetector\Debug\LineDetector.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vince\Documents\GitHub\Stentriq_Vince\LineDetector\LineDetector\Debug\LineDetector.lib" /MACHINE:X64 Debug\main.obj
+     1>Debug\main.obj : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
+     1>Done Building Project "C:\Users\Vince\Documents\GitHub\Stentriq_Vince\LineDetector\LineDetector\LineDetector\LineDetector.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.22

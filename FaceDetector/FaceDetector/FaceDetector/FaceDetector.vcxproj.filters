@@ -27,4 +27,9 @@
       <Filter>Resource Files</Filter>
     </Xml>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="150624-094923.wmv">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

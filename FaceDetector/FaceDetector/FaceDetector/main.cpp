@@ -3,6 +3,8 @@
 * @author A. Huaman ( based in the classic facedetect.cpp in samples/c )
 * @brief A simplified version of facedetect.cpp, show how to load a cascade classifier and how to find objects (Face + eyes) in a video stream - Using LBP here
 */
+
+
 #include "opencv2/objdetect.hpp"
 #include "opencv2/videoio.hpp"
 #include "opencv2/highgui.hpp"
@@ -28,6 +30,7 @@ String window_name = "Capture - Face detection";
 */
 int main(void)
 {
+	
 	VideoCapture capture;
 	Mat frame;
 
@@ -36,7 +39,8 @@ int main(void)
 	if (!eyes_cascade.load(eyes_cascade_name)){ printf("--(!)Error loading eyes cascade\n"); return -1; };
 
 	//-- 2. Read the video stream
-	capture.open(-1);
+	//capture.open(-1); this is for webcam stream
+	capture.open("150624-094923.wmv");
 	if (!capture.isOpened()) { printf("--(!)Error opening video capture\n"); return -1; }
 
 	while (capture.read(frame))
@@ -55,6 +59,7 @@ int main(void)
 		if ((char)c == 27) { break; }
 	}
 	return 0;
+	
 }
 
 /**
@@ -82,13 +87,16 @@ void detectAndDisplay(Mat frame)
 		{
 			//-- Draw the face
 			Point center(faces[i].x + faces[i].width / 2, faces[i].y + faces[i].height / 2);
-			ellipse(frame, center, Size(faces[i].width / 2, faces[i].height / 2), 0, 0, 360, Scalar(255, 0, 0), 2, 8, 0);
+			Point bottomleft(faces[i].x, faces[i].y);
+			Point topright(faces[i].x+faces[i].width, faces[i].y + faces[i].height);
+			//ellipse(frame, center, Size(faces[i].width / 2, faces[i].height / 2), 0, 0, 360, Scalar(255, 0, 0), 2, 8, 0);
+			rectangle(frame, bottomleft, topright, Scalar(0, 255, 0), 2, 8, 0);
 
 			for (size_t j = 0; j < eyes.size(); j++)
 			{ //-- Draw the eyes
 				Point eye_center(faces[i].x + eyes[j].x + eyes[j].width / 2, faces[i].y + eyes[j].y + eyes[j].height / 2);
 				int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
-				circle(frame, eye_center, radius, Scalar(255, 0, 255), 3, 8, 0);
+				circle(frame, eye_center, radius, Scalar(255, 0, 0), 3, 8, 0);
 			}
 		}
 
